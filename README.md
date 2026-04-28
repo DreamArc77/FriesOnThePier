@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/brand/logo.png" width="240" alt="去码头整点薯条" />
+  <img src="assets/brand/logo.png" width="240" alt="去码头整点薯条.Skill" />
   <h1>去码头整点薯条</h1>
   <p><b>别人只关心你飞的高不高，我关心你飞的累不累</b></p>
   <a href="https://github.com/DreamArc77/FriesOnThePier/stargazers"><img src="https://img.shields.io/github/stars/DreamArc77/FriesOnThePier?style=flat-square" alt="Stars"></a>
