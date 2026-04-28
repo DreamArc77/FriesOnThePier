@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="../../assets/brand/logo.svg" width="120" alt="去码头整点薯条" />
+  <img src="../../assets/brand/logo.png" width="120" alt="去码头整点薯条" />
   <h1>去码头整点薯条</h1>
   <p><b>饭点到了，代码可以等一口热薯条。</b></p>
   <a href="https://github.com/DreamArc77/FriesOnThePier/stargazers"><img src="https://img.shields.io/github/stars/DreamArc77/FriesOnThePier?style=flat-square" alt="Stars"></a>
@@ -20,19 +20,19 @@
 <table>
 <tr>
   <td align="center" width="33%">
-    <img src="../../assets/previews/codex-app.svg" alt="Codex App 饭点提醒预览">
-    <br><b>Codex App</b>
-    <br><sub>回答末尾自然追加饭点关怀</sub>
+    <img src="../../assets/previews/1.png" alt="安装与配置预览">
+    <br><b>安装与配置</b>
+    <br><sub>安装插件后，在对话里完成自动提醒和 MCP Token 配置</sub>
   </td>
   <td align="center" width="33%">
-    <img src="../../assets/previews/claude-code.svg" alt="Claude Code 插件预览">
-    <br><b>Claude Code</b>
-    <br><sub>同一套插件结构，双端可用</sub>
+    <img src="../../assets/previews/2.png" alt="饭点关怀预览">
+    <br><b>饭点轻提醒</b>
+    <br><sub>不打断工作，只在回答末尾自然补一句关心</sub>
   </td>
   <td align="center" width="33%">
-    <img src="../../assets/previews/order-flow.svg" alt="麦当劳点餐流程预览">
-    <br><b>点餐流程</b>
-    <br><sub>确认后通过官方 MCP 完成履约</sub>
+    <img src="../../assets/previews/3.png" alt="自然语言点餐预览">
+    <br><b>自然语言点餐</b>
+    <br><sub>从选餐、确认到支付和查单，全程聊天推进</sub>
   </td>
 </tr>
 </table>
