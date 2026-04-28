@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="assets/brand/logo.png" width="120" alt="去码头整点薯条" />
+  <img src="assets/brand/logo.png" width="240" alt="去码头整点薯条" />
   <h1>去码头整点薯条</h1>
-  <p><b>饭点到了，代码可以等一口热薯条。</b></p>
+  <p><b>别人只关心你飞的高不高，我关心你飞的累不累</b></p>
   <a href="https://github.com/DreamArc77/FriesOnThePier/stargazers"><img src="https://img.shields.io/github/stars/DreamArc77/FriesOnThePier?style=flat-square" alt="Stars"></a>
   <a href="plugins/fries-on-the-pier/.codex-plugin/plugin.json"><img src="https://img.shields.io/badge/version-0.1.0-f5c542?style=flat-square" alt="Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a>
@@ -9,11 +9,12 @@
   <a href="https://github.com/DreamArc77/FriesOnThePier"><img src="https://img.shields.io/badge/Claude%20Code-supported-d97706?style=flat-square" alt="Claude Code"></a>
 </div>
 
+
 去码头整点薯条是一个同时支持 Codex 和 Claude Code 的饭点关怀插件。
 
 它会在你长时间写代码、并且刚好到了午饭或晚饭时间时，在回答末尾轻轻补一句提醒。你如果同意，它会进入点单模式，通过麦当劳中国官方 MCP 服务 `mcd-mcp` 帮你完成点单，为你送上一顿热餐。
 
-插件只负责提醒、引导、编排和下单前确认；真实履约能力来自麦当劳中国官方 MCP。插件不会保存你的 MCP Token、手机号或完整收货地址，也不会自动下单或代替你支付。
+插件只负责提醒、引导、编排和下单前确认；真实履约能力来自麦当劳中国官方 MCP。插件不会保存你的 MCP Token、手机号或完整收货地址，也不会自动下单或代替你支付（除非你要求）
 
 ## 预览
 
@@ -37,11 +38,6 @@
 </tr>
 </table>
 
-## 统计
-
-| 双端支持 | 饭点窗口 | 官方点餐工具 | 本地敏感信息保存 |
-|---|---:|---:|---:|
-| Codex + Claude Code | 2 个 | 8 个 | 0 项 |
 
 ## 安装
 
@@ -126,4 +122,4 @@ Transport: streamablehttp
 Auth: Authorization: Bearer <MCP Token>
 ```
 
-首次点餐时，插件会引导你获取并配置 Token。Token 只应写入 Codex / Claude Code 的用户级 MCP 配置或用户环境变量，不应写入插件目录。
+首次点餐时，插件会引导你获取并配置 Token。Token 只应写入 Codex / Claude Code 的用户级 MCP 配置或用户环境变量，不写入插件目录。
