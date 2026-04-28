@@ -4,6 +4,7 @@
   <p><b>饭点到了，代码可以等一口热薯条。</b></p>
   <a href="https://github.com/DreamArc77/FriesOnThePier/stargazers"><img src="https://img.shields.io/github/stars/DreamArc77/FriesOnThePier?style=flat-square" alt="Stars"></a>
   <a href="plugins/fries-on-the-pier/.codex-plugin/plugin.json"><img src="https://img.shields.io/badge/version-0.1.0-f5c542?style=flat-square" alt="Version"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a>
   <a href="https://github.com/DreamArc77/FriesOnThePier"><img src="https://img.shields.io/badge/Codex-supported-111827?style=flat-square" alt="Codex"></a>
   <a href="https://github.com/DreamArc77/FriesOnThePier"><img src="https://img.shields.io/badge/Claude%20Code-supported-d97706?style=flat-square" alt="Claude Code"></a>
 </div>

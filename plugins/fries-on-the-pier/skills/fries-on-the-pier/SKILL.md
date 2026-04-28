@@ -19,25 +19,13 @@ description: Use whenever the Fries on the Pier plugin is mentioned or enabled f
 
 ## Codex App Setup
 
-如果用户说「启用自动饭点提醒」「修复 Codex App 自动提醒」「安装后怎么让它自动提醒」或类似需求：
+如果用户说「启用自动饭点提醒」「安装后怎么让它自动提醒」或类似需求：
 
 - 在当前会话里完成设置，不要让用户打开 PowerShell 手敲命令。
 - 说明一句：Codex App 当前需要把 hook bridge 写入用户级 Codex 配置，插件会帮他做。
 - 运行插件脚本 `scripts/setup_codex_app.py`；脚本路径相对插件根目录。当前 skill 文件在 `skills/fries-on-the-pier/SKILL.md`，插件根目录是上两级。
-- 如果用户是在验收自动注入，可以运行 `scripts/setup_codex_app.py --force-meal-window`，它会打开运行时测试模式：忽略时间、忽略每餐一次、忽略 coding 关键词，并带 `[fries-stop-hook]`。
 - 完成后告诉用户完全退出并重新打开 Codex App，然后不 `@fries-on-the-pier`，直接问一个 coding 问题测试。
 - 如果脚本发现多个 Codex home，向用户展示候选项，让用户选一个；不要猜。
-
-如果用户说「开启饭点提醒测试模式」「忽略时间和次数测试」或类似需求：
-
-- 运行 `scripts/fries_test_mode.py --enable --reset-state`。
-- 告诉用户不用改系统时间；下一次普通回答的 Stop hook 就会被当成可提醒，并且会包含 `[fries-stop-hook]`。
-- 测完后运行 `scripts/fries_test_mode.py --disable --reset-state`，恢复真实饭点和每餐一次。
-
-如果用户说「关闭饭点提醒测试模式」「恢复真实饭点逻辑」或类似需求：
-
-- 运行 `scripts/fries_test_mode.py --disable --reset-state`。
-- 告诉用户已恢复真实饭点窗口、coding 场景判断和每餐一次限制。
 
 ## First Use
 

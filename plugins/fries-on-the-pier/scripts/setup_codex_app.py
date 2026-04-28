@@ -9,7 +9,6 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from fries_core import default_state, state_path, test_mode_path, write_json_file
 from install_codex_hooks import install, verify
 
 
@@ -70,16 +69,6 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Set up Fries on the Pier for Codex App.")
     parser.add_argument("--codex-home", help="Codex home used by the Windows App, e.g. /mnt/c/Users/name/.codex.")
     parser.add_argument("--verify", action="store_true", help="Only verify hook installation.")
-    parser.add_argument(
-        "--force-meal-window",
-        action="store_true",
-        help="Enable Fries runtime test mode: always eligible, ignore frequency, show debug marker.",
-    )
-    parser.add_argument(
-        "--clear-force-meal-window",
-        action="store_true",
-        help="Disable Fries runtime test mode after acceptance testing.",
-    )
     args = parser.parse_args()
 
     codex_home = detect_codex_home(args.codex_home)
@@ -93,33 +82,6 @@ def main() -> int:
 
     for message in messages:
         print(message)
-
-    if args.force_meal_window:
-        write_json_file(
-            test_mode_path(),
-            {
-                "enabled": True,
-                "force_meal_window": "always",
-                "ignore_frequency": True,
-                "debug_marker": True,
-            },
-        )
-        write_json_file(state_path(), default_state())
-        print(f"Enabled Fries runtime test mode at {test_mode_path()}.")
-        print("Meal time, coding context, and once-per-window frequency are ignored for testing.")
-
-    if args.clear_force_meal_window:
-        write_json_file(
-            test_mode_path(),
-            {
-                "enabled": False,
-                "force_meal_window": None,
-                "ignore_frequency": False,
-                "debug_marker": False,
-            },
-        )
-        write_json_file(state_path(), default_state())
-        print(f"Disabled Fries runtime test mode at {test_mode_path()}.")
 
     print(f"Codex home: {codex_home}")
     print("Fully quit and reopen Codex App so it reloads hooks and environment.")

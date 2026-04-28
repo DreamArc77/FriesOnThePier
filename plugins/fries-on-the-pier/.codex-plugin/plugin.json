@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "A gentle meal-time nudge and guarded McDonald's China ordering flow powered by the official mcd-mcp service.",
   "author": {
-    "name": "Fries on the Pier Contributors",
-    "email": "maintainers@example.com",
+    "name": "DreamArc77",
+    "email": "DreamArc77@users.noreply.github.com",
     "url": "https://github.com/DreamArc77/FriesOnThePier"
   },
   "homepage": "https://github.com/DreamArc77/FriesOnThePier",
@@ -22,7 +22,7 @@
     "displayName": "去码头整点薯条",
     "shortDescription": "饭点后轻提醒，并安全地帮你进入点单流程。",
     "longDescription": "Fries on the Pier notices lunch or dinner windows during coding sessions, adds a restrained meal-time nudge at the end of a response, then guides an explicit, user-confirmed McDonald's China ordering flow through the official mcd-mcp service.",
-    "developerName": "Fries on the Pier Contributors",
+    "developerName": "DreamArc77",
     "category": "Productivity",
     "capabilities": [
       "Interactive",
@@ -34,12 +34,8 @@
     "termsOfServiceURL": "https://github.com/DreamArc77/FriesOnThePier",
     "defaultPrompt": [
       "启用自动饭点提醒",
-      "开启饭点提醒测试模式",
-      "关闭饭点提醒测试模式",
-      "修复 Codex App 自动提醒",
       "帮我看看现在要不要先吃点东西",
-      "继续点刚才推荐的麦当劳",
-      "用 mcd-mcp 查附近可下单门店"
+      "继续点刚才推荐的麦当劳"
     ],
     "brandColor": "#F2C94C"
   }
