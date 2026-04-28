@@ -10,34 +10,56 @@
 
 ### Codex App
 
-1. 在 Codex App 中安装插件 `fries-on-the-pier`。
-2. 安装后，在当前对话中输入或点击插件默认提示：
+1. 打开 Codex App，进入任意一个对话。
+2. 输入下面的命令，把本仓库添加为插件市场：
+
+```text
+/plugin marketplace add DreamArc77/FriesOnThePier
+```
+
+如果界面要求确认来源，选择添加这个 marketplace。
+
+3. 安装插件：
+
+```text
+/plugin install fries-on-the-pier@fries-on-the-pier
+```
+
+如果安装列表里只出现一个 `fries-on-the-pier`，也可以直接选择它安装。安装范围建议选择用户级，这样所有 Codex 对话都能使用。
+
+4. 安装完成后，在当前对话里输入：
 
 ```text
 启用自动饭点提醒
 ```
 
-插件会在对话里完成自动提醒配置。完成后，完全退出并重新打开 Codex App。
+插件会在当前对话里完成 Codex App 自动提醒配置，不需要你手动编辑配置文件。完成后，完全退出并重新打开 Codex App。
 
-3. 正常使用 Codex。到午饭或晚饭时间时，插件会在回答末尾补上一句轻提醒。
-4. 如果想点餐，回复：
+5. 重新打开后正常使用 Codex 写代码。到午饭或晚饭时间时，插件会在回答末尾补上一句轻提醒。
+6. 如果想点餐，回复：
 
 ```text
 帮我点
 ```
 
-5. 首次点餐时，如果 `mcd-mcp` 还不可用，插件会引导你打开 `open.mcd.cn` 或 `https://mcp.mcd.cn` 获取麦当劳中国官方 MCP Token。获取后直接粘贴到当前对话，插件会帮你写入用户级配置并继续点单。
+首次点餐时，如果 `mcd-mcp` 还不可用，插件会在当前对话里引导你打开 `open.mcd.cn` 或 `https://mcp.mcd.cn` 获取麦当劳中国官方 MCP Token。获取后直接粘贴到当前对话，插件会帮你写入用户级配置并继续点单；如果 Codex App 需要重新加载环境变量，插件会提示你重启 App 后继续。
 
 ### Codex CLI
 
-在 Codex CLI 中添加并安装插件：
+启动 Codex CLI 后，在交互界面里输入：
 
 ```text
 /plugin marketplace add DreamArc77/FriesOnThePier
-/plugin install fries-on-the-pier
+/plugin install fries-on-the-pier@fries-on-the-pier
 ```
 
-安装后输入：
+也可以先在终端里添加 marketplace：
+
+```bash
+codex plugin marketplace add DreamArc77/FriesOnThePier
+```
+
+然后进入 Codex CLI 交互界面安装插件。安装完成后输入：
 
 ```text
 启用自动饭点提醒
@@ -51,7 +73,7 @@
 
 ```text
 /plugin marketplace add DreamArc77/FriesOnThePier
-/plugin install fries-on-the-pier
+/plugin install fries-on-the-pier@fries-on-the-pier
 ```
 
 安装后正常使用 Claude Code。饭点时插件会在回答末尾追加轻提醒；你回复“帮我点”后，插件会在当前对话中引导你配置麦当劳中国官方 MCP Token，并继续完成点单流程。

@@ -5,10 +5,10 @@
   "author": {
     "name": "Fries on the Pier Contributors",
     "email": "maintainers@example.com",
-    "url": "https://github.com/M-China/mcd-mcp-server"
+    "url": "https://github.com/DreamArc77/FriesOnThePier"
   },
-  "homepage": "https://github.com/M-China/mcd-mcp-server",
-  "repository": "https://github.com/M-China/mcd-mcp-server",
+  "homepage": "https://github.com/DreamArc77/FriesOnThePier",
+  "repository": "https://github.com/DreamArc77/FriesOnThePier",
   "license": "MIT",
   "keywords": [
     "meal",
@@ -29,9 +29,9 @@
       "MCP",
       "Hooks"
     ],
-    "websiteURL": "https://github.com/M-China/mcd-mcp-server",
-    "privacyPolicyURL": "https://github.com/M-China/mcd-mcp-server",
-    "termsOfServiceURL": "https://github.com/M-China/mcd-mcp-server",
+    "websiteURL": "https://github.com/DreamArc77/FriesOnThePier",
+    "privacyPolicyURL": "https://github.com/DreamArc77/FriesOnThePier",
+    "termsOfServiceURL": "https://github.com/DreamArc77/FriesOnThePier",
     "defaultPrompt": [
       "启用自动饭点提醒",
       "开启饭点提醒测试模式",

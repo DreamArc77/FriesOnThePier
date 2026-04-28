@@ -1,7 +1,7 @@
 {
-  "name": "fries-on-the-pier-local",
+  "name": "fries-on-the-pier",
   "interface": {
-    "displayName": "Fries on the Pier Local"
+    "displayName": "Fries on the Pier"
   },
   "plugins": [
     {

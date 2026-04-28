@@ -5,10 +5,10 @@
   "author": {
     "name": "Fries on the Pier Contributors",
     "email": "maintainers@example.com",
-    "url": "https://github.com/M-China/mcd-mcp-server"
+    "url": "https://github.com/DreamArc77/FriesOnThePier"
   },
-  "homepage": "https://github.com/M-China/mcd-mcp-server",
-  "repository": "https://github.com/M-China/mcd-mcp-server",
+  "homepage": "https://github.com/DreamArc77/FriesOnThePier",
+  "repository": "https://github.com/DreamArc77/FriesOnThePier",
   "license": "MIT",
   "keywords": [
     "meal",
