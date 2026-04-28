@@ -1,10 +1,46 @@
-# 去码头整点薯条
+<div align="center">
+  <img src="assets/brand/logo.svg" width="120" alt="去码头整点薯条" />
+  <h1>去码头整点薯条</h1>
+  <p><b>饭点到了，代码可以等一口热薯条。</b></p>
+  <a href="https://github.com/DreamArc77/FriesOnThePier/stargazers"><img src="https://img.shields.io/github/stars/DreamArc77/FriesOnThePier?style=flat-square" alt="Stars"></a>
+  <a href="plugins/fries-on-the-pier/.codex-plugin/plugin.json"><img src="https://img.shields.io/badge/version-0.1.0-f5c542?style=flat-square" alt="Version"></a>
+  <a href="https://github.com/DreamArc77/FriesOnThePier"><img src="https://img.shields.io/badge/Codex-supported-111827?style=flat-square" alt="Codex"></a>
+  <a href="https://github.com/DreamArc77/FriesOnThePier"><img src="https://img.shields.io/badge/Claude%20Code-supported-d97706?style=flat-square" alt="Claude Code"></a>
+</div>
 
 去码头整点薯条是一个同时支持 Codex 和 Claude Code 的饭点关怀插件。
 
 它会在你长时间写代码、并且刚好到了午饭或晚饭时间时，在回答末尾轻轻补一句提醒。你如果回复“帮我点”，它会进入点单模式，通过麦当劳中国官方 MCP 服务 `mcd-mcp` 帮你完成查地址、选门店、看菜单、算价、创建订单、打开支付链接和查询订单状态。
 
 插件只负责提醒、引导、编排和下单前确认；真实履约能力来自麦当劳中国官方 MCP。插件不会保存你的 MCP Token、手机号或完整收货地址，也不会自动下单或代替你支付。
+
+## 预览
+
+<table>
+<tr>
+  <td align="center" width="33%">
+    <img src="assets/previews/codex-app.svg" alt="Codex App 饭点提醒预览">
+    <br><b>Codex App</b>
+    <br><sub>回答末尾自然追加饭点关怀</sub>
+  </td>
+  <td align="center" width="33%">
+    <img src="assets/previews/claude-code.svg" alt="Claude Code 插件预览">
+    <br><b>Claude Code</b>
+    <br><sub>同一套插件结构，双端可用</sub>
+  </td>
+  <td align="center" width="33%">
+    <img src="assets/previews/order-flow.svg" alt="麦当劳点餐流程预览">
+    <br><b>点餐流程</b>
+    <br><sub>确认后通过官方 MCP 完成履约</sub>
+  </td>
+</tr>
+</table>
+
+## 统计
+
+| 双端支持 | 饭点窗口 | 官方点餐工具 | 本地敏感信息保存 |
+|---|---:|---:|---:|
+| Codex + Claude Code | 2 个 | 8 个 | 0 项 |
 
 ## 安装
 

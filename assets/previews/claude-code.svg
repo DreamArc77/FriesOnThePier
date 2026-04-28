@@ -1,0 +1,12 @@
+<svg width="960" height="600" viewBox="0 0 960 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="600" rx="32" fill="#2A2118"/>
+  <rect x="56" y="56" width="848" height="488" rx="24" fill="#FBF7EE"/>
+  <rect x="96" y="104" width="768" height="64" rx="14" fill="#E8DDCF"/>
+  <rect x="96" y="204" width="360" height="48" rx="12" fill="#D71920"/>
+  <rect x="486" y="204" width="378" height="48" rx="12" fill="#FFC72C"/>
+  <rect x="96" y="300" width="768" height="132" rx="18" fill="#EFE7D8"/>
+  <rect x="132" y="334" width="300" height="20" rx="6" fill="#9A8065"/>
+  <rect x="132" y="374" width="460" height="20" rx="6" fill="#B7A38D"/>
+  <rect x="132" y="414" width="380" height="20" rx="6" fill="#B7A38D"/>
+  <text x="96" y="502" fill="#6E5842" font-family="Arial, sans-serif" font-size="22">Claude Code hook preview</text>
+</svg>
