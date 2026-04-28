@@ -1,49 +1,70 @@
-# Fries on the Pier
+# 去码头整点薯条
 
-去码头整点薯条 is a dual Codex and Claude Code plugin for coding sessions: it adds a gentle meal-time nudge at the end of answers, then guides a guarded McDonald's China ordering flow through the official `mcd-mcp` service when the user accepts.
+去码头整点薯条是一个同时支持 Codex 和 Claude Code 的饭点关怀插件。
 
-The plugin lives at:
+它会在你长时间写代码、并且刚好到了午饭或晚饭时间时，在回答末尾轻轻补一句提醒。你如果回复“帮我点”，它会进入点单模式，通过麦当劳中国官方 MCP 服务 `mcd-mcp` 帮你完成查地址、选门店、看菜单、算价、创建订单、打开支付链接和查询订单状态。
+
+插件只负责提醒、引导、编排和下单前确认；真实履约能力来自麦当劳中国官方 MCP。插件不会保存你的 MCP Token、手机号或完整收货地址，也不会自动下单或代替你支付。
+
+## 安装
+
+### Codex App
+
+1. 在 Codex App 中安装本仓库提供的插件 `fries-on-the-pier`。
+2. 安装后，在 Codex App 里打开插件默认提示或直接输入：
 
 ```text
-plugins/fries-on-the-pier
+启用自动饭点提醒
 ```
 
-See the plugin README for installation, Codex App hook setup, MCP token configuration, real-device testing, and acceptance steps:
+插件会在当前对话里完成必要的 Codex 自动提醒配置。完成后，完全退出并重新打开 Codex App。
 
-[plugins/fries-on-the-pier/README.md](plugins/fries-on-the-pier/README.md)
+3. 正常使用 Codex 写代码。到饭点时，回答末尾会出现自然提醒。
+4. 如果你想点餐，回复：
 
-## Quick Shape
-
-- Codex manifest: `plugins/fries-on-the-pier/.codex-plugin/plugin.json`
-- Claude Code manifest: `plugins/fries-on-the-pier/.claude-plugin/plugin.json`
-- Shared skill: `plugins/fries-on-the-pier/skills/fries-on-the-pier/SKILL.md`
-- Shared hooks: `plugins/fries-on-the-pier/scripts/`
-- Official MCP config: `plugins/fries-on-the-pier/.mcp.json`
-
-## Official MCP
-
-- Repository: <https://github.com/M-China/mcd-mcp-server>
-- Server name: `mcd-mcp`
-- URL: `https://mcp.mcd.cn`
-- Transport: `streamablehttp`
-- Auth: `Authorization: Bearer <MCP Token>`
-
-The plugin does not store McDonald's MCP tokens, phone numbers, or full addresses in the plugin directory. Tokens belong in the user's client-level MCP config or user environment.
-
-## Local Test
-
-```bash
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests
+```text
+帮我点
 ```
 
-For repeatable Codex App injection testing, enable runtime test mode:
+5. 首次点餐时，如果麦当劳中国官方 MCP 尚未连接，插件会在当前对话里引导你打开 `open.mcd.cn` 或 `https://mcp.mcd.cn` 获取 MCP Token。获取后直接粘贴到当前对话，插件会帮你写入用户级配置并连接 `mcd-mcp`。
 
-```bash
-python3 plugins/fries-on-the-pier/scripts/fries_test_mode.py --enable --reset-state
+### Codex CLI
+
+在 Codex CLI 中添加本仓库 marketplace：
+
+```text
+/plugin marketplace add DreamArc77/FriesOnThePier
+/plugin install fries-on-the-pier
 ```
 
-Disable it after acceptance testing:
+安装后，在 Codex 对话中输入：
 
-```bash
-python3 plugins/fries-on-the-pier/scripts/fries_test_mode.py --disable --reset-state
+```text
+启用自动饭点提醒
 ```
+
+随后按提示完成自动提醒配置和麦当劳 MCP Token 配置。
+
+### Claude Code
+
+在 Claude Code 中添加本仓库 marketplace：
+
+```text
+/plugin marketplace add DreamArc77/FriesOnThePier
+/plugin install fries-on-the-pier
+```
+
+安装后正常使用 Claude Code。饭点提醒由插件 hook 触发；接受提醒后，插件会在当前对话里引导你配置麦当劳中国官方 MCP Token，并继续完成点单流程。
+
+### 麦当劳 MCP Token
+
+插件使用麦当劳中国官方 MCP 服务：
+
+```text
+Server name: mcd-mcp
+URL: https://mcp.mcd.cn
+Transport: streamablehttp
+Auth: Authorization: Bearer <MCP Token>
+```
+
+首次点餐时，插件会引导你获取并配置 Token。Token 只应写入 Codex / Claude Code 的用户级 MCP 配置或用户环境变量，不应写入插件目录。
