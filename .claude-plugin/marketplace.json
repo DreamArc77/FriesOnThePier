@@ -1,0 +1,25 @@
+{
+  "name": "fries-on-the-pier-local",
+  "owner": {
+    "name": "Fries on the Pier Contributors",
+    "email": "maintainers@example.com"
+  },
+  "metadata": {
+    "description": "Local development marketplace for Fries on the Pier.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "fries-on-the-pier",
+      "source": "./plugins/fries-on-the-pier",
+      "description": "饭点后轻提醒，并安全地帮你进入点单流程。",
+      "version": "0.1.0",
+      "category": "Productivity",
+      "tags": [
+        "meal",
+        "ordering",
+        "vibe-coding"
+      ]
+    }
+  ]
+}

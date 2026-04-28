@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+
+.venv/
+venv/
+env/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.fries-on-the-pier/
