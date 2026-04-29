@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="assets/brand/logo.png" width="240" alt="去码头整点薯条.Skill" />
-  <h1>去码头整点薯条</h1>
+  <img src="assets/brand/logo.png" width="240" alt="去码头整点薯条" />
+  <h1>去码头整点薯条.Skill</h1>
   <p><b>别人只关心你飞的高不高，我关心你飞的累不累</b></p>
   <a href="https://github.com/DreamArc77/FriesOnThePier/stargazers"><img src="https://img.shields.io/github/stars/DreamArc77/FriesOnThePier?style=flat-square" alt="Stars"></a>
   <a href="plugins/fries-on-the-pier/.codex-plugin/plugin.json"><img src="https://img.shields.io/badge/version-0.1.0-f5c542?style=flat-square" alt="Version"></a>
