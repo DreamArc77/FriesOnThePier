@@ -75,7 +75,7 @@
 帮我点
 ```
 
-首次点餐时，如果麦当劳中国官方 MCP 尚未连接，插件会在当前对话里引导你打开 `open.mcd.cn` 或 `https://mcp.mcd.cn` 获取 MCP Token。获取后直接粘贴到当前对话，插件会帮你写入用户级配置并连接 `mcd-mcp`；如果 Codex App 需要重新加载环境变量，插件会提示你重启 App 后继续点餐。
+首次点餐时，如果麦当劳中国官方 MCP 尚未连接，插件会在当前对话里引导你打开 `https://open.mcd.cn/mcp` 获取 MCP Token。获取后直接粘贴到当前对话，插件会帮你写入用户级配置并连接 `mcd-mcp`；如果 Codex App 需要重新加载环境变量，插件会提示你重启 App 后继续点餐。
 
 ### Codex CLI
 
@@ -122,4 +122,4 @@ Transport: streamablehttp
 Auth: Authorization: Bearer <MCP Token>
 ```
 
-首次点餐时，插件会引导你获取并配置 Token。Token 只应写入 Codex / Claude Code 的用户级 MCP 配置或用户环境变量，不写入插件目录。
+首次点餐时，插件会引导你打开 `https://open.mcd.cn/mcp` 获取 Token，并在当前对话里帮你完成配置。你只需要提供 Token，不需要手动配置 MCP。Token 只应写入 Codex / Claude Code 的用户级 MCP 配置或用户环境变量，不写入插件目录。

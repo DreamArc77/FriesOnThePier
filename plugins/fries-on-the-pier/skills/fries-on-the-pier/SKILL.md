@@ -32,11 +32,11 @@ description: Use whenever the Fries on the Pier plugin is mentioned or enabled f
 如果用户想点餐，但 `mcd-mcp` 工具不可见、鉴权失败，或 MCP 返回 401/403：
 
 - 不要假装可以点餐。
-- 在当前会话里说明需要麦当劳中国官方 MCP Token。
-- 引导用户打开 `open.mcd.cn` 或 `https://mcp.mcd.cn` 获取 Token，并直接粘贴到当前对话。
+- 在当前会话里说明点餐仍需要麦当劳中国官方 MCP 服务，但用户只需要提供官方 MCP Token，不需要自己手动配置 MCP。
+- 引导用户打开 `https://open.mcd.cn/mcp` 获取 Token，并直接粘贴到当前对话。
 - 用户粘贴 Token 后，不要在回复里回显 Token。
 - 在当前会话里帮助用户完成用户级 MCP 配置；不要让用户手动编辑插件内部文件。
-- Codex App 可运行 `scripts/configure_mcd_mcp.py --token-stdin`，从 stdin 接收用户粘贴的 Token，写入 Windows 用户级 `MCD_MCP_TOKEN`，并配置 `mcd-mcp` 使用 `--bearer-token-env-var MCD_MCP_TOKEN`。不要把 Token 放进命令行参数，不要在回复里回显。
+- Codex App 可运行 `scripts/configure_mcd_mcp.py --token-stdin`，从 stdin 接收用户粘贴的 Token，写入 Windows 用户级 `MCD_MCP_TOKEN`，并配置 `mcd-mcp` 使用 `--bearer-token-env-var MCD_MCP_TOKEN`。不要让用户手动编辑 MCP 配置，不要把 Token 放进命令行参数，不要在回复里回显。
 - Codex CLI 可用命令：`codex mcp add mcd-mcp --url https://mcp.mcd.cn --bearer-token-env-var MCD_MCP_TOKEN`，并把 Token 放入用户级环境变量 `MCD_MCP_TOKEN`。
 - Codex App 在 Windows 上可把 Token 写入用户级环境变量 `MCD_MCP_TOKEN`，并提示完全重启 App。
 - Claude Code 按其 MCP 配置方式连接 `mcd-mcp`，Token 放入用户级环境或 Claude 支持的认证位置。
