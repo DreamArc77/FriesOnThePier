@@ -20,7 +20,11 @@ def windows_codex_candidates() -> list[Path]:
             if child.name.lower() in {"all users", "default", "default user", "public"}:
                 continue
             codex_home = child / ".codex"
-            if codex_home.exists():
+            try:
+                exists = codex_home.exists()
+            except PermissionError:
+                continue
+            if exists:
                 candidates.append(codex_home)
     return candidates
 

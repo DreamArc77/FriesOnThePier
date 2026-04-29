@@ -157,6 +157,11 @@ def payload_now(payload: dict[str, Any]) -> datetime | None:
         return None
 
 
+def forced_window_name() -> str | None:
+    value = os.environ.get("FRIES_FORCE_MEAL_WINDOW", "").strip().lower()
+    return value if value in {"lunch", "dinner"} else None
+
+
 def matches_any(text: str, patterns: tuple[str, ...]) -> bool:
     return any(re.search(pattern, text, flags=re.IGNORECASE) for pattern in patterns)
 

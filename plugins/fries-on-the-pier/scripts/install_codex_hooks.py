@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 from pathlib import Path
 from typing import Any
 
@@ -20,29 +21,44 @@ def plugin_root() -> Path:
     return Path(__file__).resolve().parents[1]
 
 
-def hook_command(event: str) -> str:
+def shell_quote(value: str) -> str:
+    return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def is_windows_codex_home(path: Path) -> bool:
+    parts = path.expanduser().parts
+    return len(parts) >= 4 and parts[:3] == ("/", "mnt", "c") and parts[3].lower() == "users"
+
+
+def hook_command(event: str, *, codex_home: Path | None = None) -> str:
     hook_path = plugin_root() / "scripts" / "hook.py"
+    if codex_home is not None and is_windows_codex_home(codex_home):
+        distro = os.environ.get("WSL_DISTRO_NAME") or "Ubuntu"
+        return (
+            f"wsl.exe -d {shell_quote(distro)} -- "
+            f"python3 {shell_quote(str(hook_path))} --event {event}"
+        )
     return f'python3 "{hook_path}" --event {event}'
 
 
-def fries_group(event: str, matcher: str = "") -> dict[str, Any]:
+def fries_group(event: str, matcher: str = "", *, codex_home: Path | None = None) -> dict[str, Any]:
     return {
         "matcher": matcher,
         "hooks": [
             {
                 "type": "command",
-                "command": hook_command(event),
+                "command": hook_command(event, codex_home=codex_home),
             }
         ],
     }
 
 
-def fries_hooks() -> dict[str, list[dict[str, Any]]]:
+def fries_hooks(codex_home: Path | None = None) -> dict[str, list[dict[str, Any]]]:
     return {
-        "Stop": [fries_group("Stop")],
-        "UserPromptSubmit": [fries_group("UserPromptSubmit")],
-        "PreToolUse": [fries_group("PreToolUse", MCD_MATCHER)],
-        "PostToolUse": [fries_group("PostToolUse", ORDER_MATCHER)],
+        "Stop": [fries_group("Stop", codex_home=codex_home)],
+        "UserPromptSubmit": [fries_group("UserPromptSubmit", codex_home=codex_home)],
+        "PreToolUse": [fries_group("PreToolUse", MCD_MATCHER, codex_home=codex_home)],
+        "PostToolUse": [fries_group("PostToolUse", ORDER_MATCHER, codex_home=codex_home)],
     }
 
 
@@ -82,7 +98,8 @@ def install(path: Path, *, dry_run: bool) -> dict[str, Any]:
         if isinstance(groups, list):
             hooks[event] = [group for group in groups if not is_fries_group(group)]
 
-    for event, groups in fries_hooks().items():
+    codex_home = path.parent
+    for event, groups in fries_hooks(codex_home).items():
         existing = hooks.setdefault(event, [])
         if not isinstance(existing, list):
             raise ValueError(f"{path} hooks.{event} must be a list")
