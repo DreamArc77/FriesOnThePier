@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐私政策 — 去码头整点薯条</title>
+  <meta name="description" content="去码头整点薯条插件隐私政策" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sky:      #87CEEB;
+      --cream:    #FFF8EE;
+      --ink:      #1A1A1A;
+      --pier:     #5A5A5A;
+      --fries:    #F5C542;
+      --ketchup:  #E8433A;
+      --white:    #FFFFFF;
+      --border:   #D4C8B0;
+    }
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.8;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(0,0,0,.03) 28px, rgba(0,0,0,.03) 29px);
+    }
+
+    /* ── 导航 ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 60px;
+      background: rgba(255,248,238,.92); backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1rem; color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--ketchup); }
+    .nav-back {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+      text-decoration: none; transition: color .2s;
+    }
+    .nav-back:hover { color: var(--ketchup); }
+
+    /* ── 内容 ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 100px 5% 80px;
+    }
+
+    h1 {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 2rem; color: var(--ink);
+      margin-bottom: .4rem;
+      position: relative; display: inline-block;
+    }
+    h1::after {
+      content: '';
+      display: block; height: 5px;
+      background: var(--fries);
+      border-radius: 3px;
+      margin-top: 4px;
+      transform: rotate(-1deg);
+    }
+
+    .effective {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+      margin: 1.2rem 0 2.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px dashed var(--border);
+    }
+
+    h2 {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1.1rem; color: var(--ketchup);
+      margin: 2.2rem 0 .6rem;
+    }
+
+    p {
+      font-size: .93rem; color: var(--pier);
+      line-height: 1.9; margin-bottom: .8rem;
+    }
+
+    ul {
+      padding-left: 1.4rem; margin-bottom: .8rem;
+    }
+    li {
+      font-size: .93rem; color: var(--pier);
+      line-height: 1.9; margin-bottom: .25rem;
+    }
+
+    a { color: var(--ketchup); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 2px solid var(--border);
+      background: var(--sky);
+      padding: 1.8rem 5%;
+      text-align: center;
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+    }
+    .footer-links { margin-bottom: .6rem; }
+    .footer-links a {
+      color: var(--pier); text-decoration: none;
+      margin: 0 .6rem; transition: color .2s;
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: .95rem;
+    }
+    .footer-links a:hover { color: var(--ketchup); }
+    .footer-addr {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: .78rem; color: var(--pier);
+      line-height: 1.7; margin-bottom: .4rem;
+    }
+    .footer-copy {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: .78rem; color: var(--pier);
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">🐦 去码头整点<span>薯条</span></a>
+  <a href="index.html" class="nav-back">← 返回首页</a>
+</nav>
+
+<div class="container">
+  <h1>隐私政策</h1>
+  <div class="effective">生效日期：2026年4月30日</div>
+
+  <p>上海惊喜人科技有限公司（"我们"）开发了去码头整点薯条（FriesOnThePier），一款免费开源的 AI 编码助手插件。本隐私政策说明我们收集哪些信息、如何使用以及您的权利。</p>
+
+  <h2>1. 插件做了什么</h2>
+  <p>去码头整点薯条是一款运行在 Codex / Claude Code 等 AI 编码工具中的插件。它在本地工具链中运行，不需要注册账号。核心功能是在饭点时在 AI 回答末尾添加一句提醒，并在您同意后通过麦当劳官方 MCP 服务协助下单。</p>
+
+  <h2>2. 我们收集的信息</h2>
+  <p>插件本身不收集任何个人数据：</p>
+  <ul>
+    <li>不向我们的服务器传输任何数据。</li>
+    <li>不要求账号注册。</li>
+    <li>所有配置（包括 MCP Token）仅存储在您设备本地的 Codex / Claude Code 用户配置文件中。</li>
+    <li>不记录、上传或存储您在会话中输入的任何文字或操作。</li>
+  </ul>
+
+  <h2>3. 麦当劳 MCP Token</h2>
+  <p>如果您选择使用点餐功能，需要提供麦当劳中国官方 MCP Token。该 Token：</p>
+  <ul>
+    <li>仅存储在您本地设备上的 Codex / Claude Code 用户级配置或环境变量中。</li>
+    <li>仅用于代表您直接向麦当劳 MCP 服务发起请求。</li>
+    <li>不会传输到或存储在我们的服务器上。</li>
+  </ul>
+  <p>麦当劳 MCP 服务由麦当劳中国运营，其数据处理规则请参考麦当劳中国隐私政策。</p>
+
+  <h2>4. 开源透明</h2>
+  <p>去码头整点薯条在 MIT 许可证下完全开源。您可以在 <a href="https://github.com/DreamArc77/FriesOnThePier" target="_blank">github.com/DreamArc77/FriesOnThePier</a> 查看所有代码，不存在隐藏的数据收集机制。</p>
+
+  <h2>5. Cookie 与分析</h2>
+  <p>本官网不使用广告 Cookie、第三方分析工具或追踪像素。</p>
+
+  <h2>6. 您的权利</h2>
+  <p>由于插件不收集个人数据，我们不持有任何可供访问或删除的个人信息。如有任何疑问，请通过下方联系方式联系我们，我们将在30天内回复。</p>
+
+  <h2>7. 政策更新</h2>
+  <p>我们可能不时更新本隐私政策。更新内容将在本页面发布，并注明新的生效日期。</p>
+
+  <h2>8. 联系我们</h2>
+  <p>如有隐私相关问题，请联系：<br/>
+  <a href="mailto:support@surpriseman.ai">support@surpriseman.ai</a><br/>
+  上海市徐汇区龙台路180号3楼<br/>
+  3rd Floor, No. 180 Longtai Road, Xuhui District, Shanghai</p>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">🏠 首页</a>
+    <a href="privacy.html">隐私政策</a>
+    <a href="terms.html">用户协议</a>
+  </div>
+  <p class="footer-addr">3rd Floor, No. 180 Longtai Road, Xuhui District, Shanghai</p>
+  <p class="footer-copy">© 2026 Shanghai SurpriseMan Technology Co., LTD. All rights reserved.</p>
+</footer>
+</body>
+</html>
