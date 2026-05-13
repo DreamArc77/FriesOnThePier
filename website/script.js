@@ -4,12 +4,8 @@
 
 /* ─── 1. 气泡打字机效果 ─── */
 const bubbleText = document.getElementById('bubble-text');
-const lines = [
-  '别人只关心你飞的高不高，',
-  '我关心你飞的累不累',
-  '（和饿不饿）。'
-];
-const fullText = lines.join('\n');
+const rawLines = bubbleText.dataset.lines || "别人只关心你飞的高不高，|我关心你飞的累不累|（和饿不饿）。";
+const fullText = rawLines.split('|').join('\n');
 
 let charIdx = 0;
 let started = false;

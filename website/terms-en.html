@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — FriesOnThePier</title>
+  <meta name="description" content="Terms of Service for FriesOnThePier Plugin" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="ENG_logo.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sky:      #87CEEB;
+      --cream:    #FFF8EE;
+      --ink:      #1A1A1A;
+      --pier:     #5A5A5A;
+      --fries:    #F5C542;
+      --ketchup:  #E8433A;
+      --white:    #FFFFFF;
+      --border:   #D4C8B0;
+    }
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.8;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(0,0,0,.03) 28px, rgba(0,0,0,.03) 29px);
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 60px;
+      background: rgba(255,248,238,.92); backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1rem; color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--ketchup); }
+    .nav-back {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+      text-decoration: none; transition: color .2s;
+    }
+    .nav-back:hover { color: var(--ketchup); }
+
+    /* ── Content ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 100px 5% 80px;
+    }
+
+    h1 {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 2rem; color: var(--ink);
+      margin-bottom: .4rem;
+      position: relative; display: inline-block;
+    }
+    h1::after {
+      content: '';
+      display: block; height: 5px;
+      background: var(--fries);
+      border-radius: 3px;
+      margin-top: 4px;
+      transform: rotate(-1deg);
+    }
+
+    .effective {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+      margin: 1.2rem 0 2.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px dashed var(--border);
+    }
+
+    h2 {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1.1rem; color: var(--ketchup);
+      margin: 2.2rem 0 .6rem;
+    }
+
+    p {
+      font-size: .93rem; color: var(--pier);
+      line-height: 1.9; margin-bottom: .8rem;
+    }
+
+    ul {
+      padding-left: 1.4rem; margin-bottom: .8rem;
+    }
+    li {
+      font-size: .93rem; color: var(--pier);
+      line-height: 1.9; margin-bottom: .25rem;
+    }
+
+    a { color: var(--ketchup); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .note {
+      font-family: 'Caveat', cursive;
+      font-size: .95rem; color: var(--pier);
+      margin-top: 1.5rem;
+      padding: .8rem 1rem;
+      border: 2px dashed var(--border);
+      border-radius: 8px;
+      background: rgba(135,206,235,.12);
+    }
+
+    /* ── LANGUAGE SWITCHER ── */
+    .lang-switcher {
+      display: flex;
+      gap: 4px;
+      background: var(--white);
+      border-radius: 100px;
+      padding: 4px;
+    }
+    .lang-switcher a {
+      text-decoration: none;
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 0.9rem;
+      color: var(--pier);
+      padding: 4px 10px;
+      border-radius: 100px;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+    .lang-switcher a:hover {
+      color: var(--ketchup);
+      background: var(--cream);
+    }
+    .lang-switcher a.active {
+      background: var(--fries);
+      color: var(--ink);
+      border: 1px solid var(--ink);
+    }
+    nav .lang-switcher {
+      box-shadow: 1px 1px 0 var(--ink);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 2px solid var(--border);
+      background: var(--sky);
+      padding: 1.8rem 5%;
+      text-align: center;
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+    }
+    .footer-links { margin-bottom: .6rem; }
+    .footer-links a {
+      color: var(--pier); text-decoration: none;
+      margin: 0 .6rem; transition: color .2s;
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: .95rem;
+    }
+    .footer-links a:hover { color: var(--ketchup); }
+    .footer-addr {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: .78rem; color: var(--pier);
+      line-height: 1.7; margin-bottom: .4rem;
+    }
+    .footer-copy {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: .78rem; color: var(--pier);
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index-en.html" class="nav-logo">🐦 FriesOnThe<span>Pier</span></a>
+  <div style="display:flex; align-items:center; gap: 16px;">
+    <div class="lang-switcher">
+      <a href="terms.html">中文</a>
+      <a href="terms-en.html" class="active">EN</a>
+      <a href="terms-ja.html">日本語</a>
+    </div>
+    <a href="index-en.html" class="nav-back">← Back to Home</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Terms of Service</h1>
+  <div class="effective">Effective Date: April 30, 2026</div>
+
+  <h2>1. About this plugin</h2>
+  <p>FriesOnThePier (the "Plugin") is a free open-source plugin developed by Shanghai SurpriseMan Technology Co., LTD. ("we"), supporting AI coding tools like Codex and Claude Code. The plugin reminds users to eat at meal times and can assist with ordering through the McDonald's China official MCP service.</p>
+
+  <h2>2. Acceptance of Terms</h2>
+  <p>By installing, enabling, or using this plugin, you agree to be bound by these Terms of Service. If you do not agree, please do not use this plugin.</p>
+
+  <h2>3. License</h2>
+  <p>FriesOnThePier is released under the MIT License. You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the plugin, subject to the MIT License terms published in the project repository at <a href="https://github.com/DreamArc77/FriesOnThePier" target="_blank">github.com/DreamArc77/FriesOnThePier</a>.</p>
+
+  <h2>4. Eligibility</h2>
+  <p>You must be at least 13 years old to use this plugin. By using this plugin, you confirm that you meet this requirement.</p>
+
+  <h2>5. Acceptable Use</h2>
+  <p>You agree not to use the plugin for:</p>
+  <ul>
+    <li>Any behavior that violates applicable laws or regulations in your area.</li>
+    <li>Violating contractual obligations or internal policies with employers or clients.</li>
+    <li>Interfering with, damaging, or disrupting any third-party software, systems, or data.</li>
+    <li>Generating or spreading harmful, illegal, or abusive content.</li>
+    <li>Bypassing security or monitoring systems in ways that violate applicable laws.</li>
+  </ul>
+
+  <h2>6. Third-Party MCP Services</h2>
+  <p>The ordering function relies on the McDonald's China official MCP service (mcd-mcp). When using this function, you must also comply with McDonald's China's relevant terms of service and privacy policy. We are not responsible for the availability, accuracy, or any order outcomes of the McDonald's service.</p>
+
+  <h2>7. Disclaimer of Warranties</h2>
+  <p>The plugin is provided "as is" and "as available", without any express or implied warranties of any kind, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not guarantee that the plugin will be uninterrupted, error-free, or achieve any specific results.</p>
+
+  <h2>8. Limitation of Liability</h2>
+  <p>To the maximum extent permitted by applicable law, Shanghai SurpriseMan Technology Co., LTD. and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from the use or inability to use the plugin, including but not limited to employment impact, data loss, or system damage. Use of this plugin is at your own risk.</p>
+
+  <h2>9. User Responsibility</h2>
+  <p>You are solely responsible for how you use this plugin. We are not responsible for any professional, legal, or personal consequences arising from the use of this plugin, including but not limited to disciplinary action by employers.</p>
+
+  <h2>10. Updates to Terms</h2>
+  <p>We may update these terms from time to time. Updates will be posted on this page with the new effective date. Continued use after an update constitutes acceptance.</p>
+
+  <h2>11. Governing Law</h2>
+  <p>These terms are governed by the laws of the People's Republic of China. Any disputes shall be submitted to a competent court in Shanghai for resolution.</p>
+
+  <h2>12. Contact Us</h2>
+  <p>If you have any questions about these terms, please contact:<br/>
+  <a href="mailto:support@surpriseman.ai">support@surpriseman.ai</a><br/>
+  3rd Floor, No. 180 Longtai Road, Xuhui District, Shanghai</p>
+
+  <p class="note">Notice: These terms of service are governed by the laws of the PRC, and disputes shall be resolved by a competent court in Shanghai. If you have any questions, please communicate with us via the contact info above.</p>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index-en.html">🏠 Home</a>
+    <a href="privacy-en.html">Privacy Policy</a>
+    <a href="terms-en.html">Terms of Service</a>
+  </div>
+  <p class="footer-addr">3rd Floor, No. 180 Longtai Road, Xuhui District, Shanghai</p>
+  <p class="footer-copy">© 2026 Shanghai SurpriseMan Technology Co., LTD. All rights reserved.</p>
+</footer>
+</body>
+</html>

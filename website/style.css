@@ -387,17 +387,14 @@ body {
 }
 
 .step-icon-wrap {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto var(--space-md);
-  overflow: hidden;
   border-radius: var(--r-sm);
-}
-
-.step-icon {
-  width: 300%;
-  height: 100%;
-  object-fit: cover;
+  overflow: hidden;
+  background-image: url('steps_icons.png');
+  background-size: 340px 340px;
+  background-repeat: no-repeat;
 }
 
 .step-title {
@@ -789,6 +786,13 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
+/* 次要 CTA：GitHub 按钮，降低视觉权重 */
+.cta-group--secondary {
+  margin-top: var(--space-md);
+  opacity: 0.72;
+  transition: opacity 0.2s;
+}
+.cta-group--secondary:hover { opacity: 1; }
 
 /* GitHub 图标 */
 .btn-icon {
@@ -990,3 +994,47 @@ body {
   .btn-waitlist { width: 100%; }
 }
 
+/* ═══════════════════════════════════════
+   LANGUAGE SWITCHER
+   ═══════════════════════════════════════ */
+.lang-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: var(--space-xs);
+  z-index: 100;
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: var(--r-pill);
+  padding: 4px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.lang-switcher a {
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--pier);
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.lang-switcher a:hover {
+  color: var(--ketchup);
+  background: var(--cream);
+}
+
+.lang-switcher a.active {
+  background: var(--fries);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+/* Nav 上的 Switcher （针对 privacy / terms） */
+nav .lang-switcher {
+  position: static;
+  box-shadow: 1px 1px 0 var(--ink);
+}

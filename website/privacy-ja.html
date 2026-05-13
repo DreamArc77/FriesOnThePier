@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プライバシーポリシー — FriesOnThePier</title>
+  <meta name="description" content="FriesOnThePierプラグイン プライバシーポリシー" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="ENG_logo.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sky:      #87CEEB;
+      --cream:    #FFF8EE;
+      --ink:      #1A1A1A;
+      --pier:     #5A5A5A;
+      --fries:    #F5C542;
+      --ketchup:  #E8433A;
+      --white:    #FFFFFF;
+      --border:   #D4C8B0;
+    }
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.8;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(0,0,0,.03) 28px, rgba(0,0,0,.03) 29px);
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 60px;
+      background: rgba(255,248,238,.92); backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1rem; color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--ketchup); }
+    .nav-back {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+      text-decoration: none; transition: color .2s;
+    }
+    .nav-back:hover { color: var(--ketchup); }
+
+    /* ── Content ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 100px 5% 80px;
+    }
+
+    h1 {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 2rem; color: var(--ink);
+      margin-bottom: .4rem;
+      position: relative; display: inline-block;
+    }
+    h1::after {
+      content: '';
+      display: block; height: 5px;
+      background: var(--fries);
+      border-radius: 3px;
+      margin-top: 4px;
+      transform: rotate(-1deg);
+    }
+
+    .effective {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+      margin: 1.2rem 0 2.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px dashed var(--border);
+    }
+
+    h2 {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1.1rem; color: var(--ketchup);
+      margin: 2.2rem 0 .6rem;
+    }
+
+    p {
+      font-size: .93rem; color: var(--pier);
+      line-height: 1.9; margin-bottom: .8rem;
+    }
+
+    ul {
+      padding-left: 1.4rem; margin-bottom: .8rem;
+    }
+    li {
+      font-size: .93rem; color: var(--pier);
+      line-height: 1.9; margin-bottom: .25rem;
+    }
+
+    a { color: var(--ketchup); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── LANGUAGE SWITCHER ── */
+    .lang-switcher {
+      display: flex;
+      gap: 4px;
+      background: var(--white);
+      border-radius: 100px;
+      padding: 4px;
+    }
+    .lang-switcher a {
+      text-decoration: none;
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 0.9rem;
+      color: var(--pier);
+      padding: 4px 10px;
+      border-radius: 100px;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+    .lang-switcher a:hover {
+      color: var(--ketchup);
+      background: var(--cream);
+    }
+    .lang-switcher a.active {
+      background: var(--fries);
+      color: var(--ink);
+      border: 1px solid var(--ink);
+    }
+    nav .lang-switcher {
+      box-shadow: 1px 1px 0 var(--ink);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 2px solid var(--border);
+      background: var(--sky);
+      padding: 1.8rem 5%;
+      text-align: center;
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+    }
+    .footer-links { margin-bottom: .6rem; }
+    .footer-links a {
+      color: var(--pier); text-decoration: none;
+      margin: 0 .6rem; transition: color .2s;
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: .95rem;
+    }
+    .footer-links a:hover { color: var(--ketchup); }
+    .footer-addr {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: .78rem; color: var(--pier);
+      line-height: 1.7; margin-bottom: .4rem;
+    }
+    .footer-copy {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: .78rem; color: var(--pier);
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index-ja.html" class="nav-logo">🐦 FriesOnThe<span>Pier</span></a>
+  <div style="display:flex; align-items:center; gap: 16px;">
+    <div class="lang-switcher">
+      <a href="privacy.html">中文</a>
+      <a href="privacy-en.html">EN</a>
+      <a href="privacy-ja.html" class="active">日本語</a>
+    </div>
+    <a href="index-ja.html" class="nav-back">← ホームに戻る</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>プライバシーポリシー</h1>
+  <div class="effective">発効日：2026年4月30日</div>
+
+  <p>上海惊喜人科技有限公司（「当社」）は、無料のオープンソースAIコーディングアシスタントプラグインである FriesOnThePier を開発しました。このプライバシーポリシーでは、当社が収集する情報、その使用方法、およびユーザーの権利について説明します。</p>
+
+  <h2>1. プラグインの機能</h2>
+  <p>FriesOnThePier は、Codex や Claude Code などのAIコーディングツール内で動作するプラグインです。ローカルのツールチェーン内で動作し、アカウント登録は必要ありません。主な機能は、食事の時間にAIの回答の最後にリマインダーを追加し、ユーザーの同意を得た上で、マクドナルド中国の公式MCPサービスを通じて注文をサポートすることです。</p>
+
+  <h2>2. 収集する情報</h2>
+  <p>プラグイン自体は個人データを収集しません：</p>
+  <ul>
+    <li>当社のサーバーにデータを送信することはありません。</li>
+    <li>アカウント登録を要求することはありません。</li>
+    <li>すべての設定（MCP Tokenを含む）は、デバイス上のローカルにある Codex / Claude Code ユーザー設定ファイルにのみ保存されます。</li>
+    <li>セッション中に入力したテキストや操作を記録、アップロード、または保存することはありません。</li>
+  </ul>
+
+  <h2>3. マクドナルド MCP Token</h2>
+  <p>注文機能を使用することを選択した場合、マクドナルド中国公式 MCP Token を提供する必要があります。この Token は：</p>
+  <ul>
+    <li>デバイス上の Codex / Claude Code のローカルユーザーレベル設定または環境変数にのみ保存されます。</li>
+    <li>ユーザーに代わってマクドナルドMCPサービスに直接リクエストを送信するためだけに使用されます。</li>
+    <li>当社のサーバーに送信または保存されることはありません。</li>
+  </ul>
+  <p>マクドナルドMCPサービスは、マクドナルド中国によって運営されています。データ処理のルールについては、マクドナルド中国のプライバシーポリシーを参照してください。</p>
+
+  <h2>4. オープンソースの透明性</h2>
+  <p>FriesOnThePier はMITライセンスの下で完全にオープンソース化されています。すべてのコードは <a href="https://github.com/DreamArc77/FriesOnThePier" target="_blank">github.com/DreamArc77/FriesOnThePier</a> で確認できます。隠されたデータ収集メカニズムは存在しません。</p>
+
+  <h2>5. Cookie と分析</h2>
+  <p>この公式サイトは、広告Cookie、サードパーティの分析ツール、またはトラッキングピクセルを使用していません。</p>
+
+  <h2>6. ユーザーの権利</h2>
+  <p>プラグインは個人データを収集しないため、当社はアクセスまたは削除できる個人情報を保持していません。ご質問がある場合は、以下の連絡先までお問い合わせください。30日以内に返信いたします。</p>
+
+  <h2>7. ポリシーの更新</h2>
+  <p>当社は、このプライバシーポリシーを随時更新する場合があります。更新はこのページに新しい発効日とともに掲載されます。</p>
+
+  <h2>8. お問い合わせ</h2>
+  <p>プライバシーに関するご質問は、以下までお問い合わせください：<br/>
+  <a href="mailto:support@surpriseman.ai">support@surpriseman.ai</a><br/>
+  3rd Floor, No. 180 Longtai Road, Xuhui District, Shanghai</p>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index-ja.html">🏠 ホーム</a>
+    <a href="privacy-ja.html">プライバシーポリシー</a>
+    <a href="terms-ja.html">利用規約</a>
+  </div>
+  <p class="footer-addr">3rd Floor, No. 180 Longtai Road, Xuhui District, Shanghai</p>
+  <p class="footer-copy">© 2026 Shanghai SurpriseMan Technology Co., LTD. All rights reserved.</p>
+</footer>
+</body>
+</html>

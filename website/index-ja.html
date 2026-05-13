@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>去码头整点薯条 · 饭点关怀插件</title>
-  <meta name="description" content="别人只关心你飞的高不高，我关心你飞的累不累（和饿不饿）。去码头整点薯条，一个同时支持 Codex 和 Claude Code 的饭点提醒插件。" />
-  <meta property="og:title" content="去码头整点薯条 · 饭点关怀插件" />
-  <meta property="og:description" content="饭点到了，AI 会轻声提醒你。然后帮你点麦当劳。" />
+  <title>FriesOnThePier · 食事リマインダープラグイン</title>
+  <meta name="description" content="他の人は君がどれだけ高く飛べるかしか気にしないが、僕は君が疲れていないか（そしてお腹が空いていないか）を気にするよ。FriesOnThePier、CodexとClaude Codeの両方をサポートする食事リマインダープラグイン。" />
+  <meta property="og:title" content="FriesOnThePier · 食事リマインダープラグイン" />
+  <meta property="og:description" content="食事の時間になると、AIが優しくリマインドします。そしてマクドナルドの注文をお手伝いします。" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet" />
@@ -14,35 +14,32 @@
   <link rel="icon" type="image/png" href="ENG_logo.png" />
 </head>
 <body>
-  <!-- ── 语言切换 ── -->
+  <!-- ── Language Switcher ── -->
   <div class="lang-switcher">
-    <a href="index.html" class="active">中文</a>
+    <a href="index.html">中文</a>
     <a href="index-en.html">EN</a>
-    <a href="index-ja.html">日本語</a>
+    <a href="index-ja.html" class="active">日本語</a>
   </div>
 
   <!-- ░░░ HERO ░░░ -->
   <section id="hero" class="hero">
     <div class="hero-inner">
       <div class="hero-bird" id="hero-bird">
-        <img src="ENG_logo.png" alt="去码头整点薯条 Logo" id="seagull-img" />
+        <img src="ENG_logo.png" alt="FriesOnThePier Logo" id="seagull-img" />
       </div>
       <div class="hero-content">
         <div class="speech-bubble" id="speech-bubble">
-          <span class="bubble-text" id="bubble-text" data-lines="别人只关心你飞的高不高，|我关心你飞的累不累|（和饿不饿）。"></span>
+          <span class="bubble-text" id="bubble-text" data-lines="他の人は君がどれだけ高く飛べるかしか気にしないが、|僕は君が疲れていないか|（そしてお腹が空いていないか）を気にするよ。"></span>
         </div>
         <p class="hero-sub">
-          去码头整点薯条 · 饭点关怀插件<br/>
-          <span class="hero-sub-small">让 Codex 和 Claude Code 记得提醒你吃饭</span>
+          FriesOnThePier · 食事リマインダープラグイン<br/>
+          <span class="hero-sub-small">Codex と Claude Code に食事をリマインドさせよう</span>
         </p>
 
-        <!-- ── CTA 按钮组（仅保留主要转化入口）── -->
-
-
-        <!-- ── Waitlist 表单 ── -->
+        <!-- ── Waitlist Form ── -->
         <div class="waitlist-card" id="waitlist">
-          <div class="waitlist-label caveat">📬 限定版体验名额</div>
-          <p class="waitlist-desc">留下邮箱，我们会在限定版本准备好时第一时间通知你。<br/><span class="caveat" style="color:var(--ketchup)">（不发垃圾邮件，海鸥保证。）</span></p>
+          <div class="waitlist-label caveat">📬 限定版ベータウェイティングリスト</div>
+          <p class="waitlist-desc">メールアドレスを残していただければ、限定版の準備ができ次第、すぐにお知らせします。<br/><span class="caveat" style="color:var(--ketchup)">(スパムは送りません、カモメの約束です。)</span></p>
           <form class="waitlist-form" id="waitlist-form" novalidate>
             <div class="waitlist-input-wrap">
               <input
@@ -63,17 +60,17 @@
           <div class="waitlist-success" id="waitlist-success" aria-live="polite" hidden>
             <span class="success-bird">🐦</span>
             <div>
-              <strong class="caveat">叼到了！</strong><br/>
-              <span style="font-size:.9rem;color:var(--pier)">薯条炸好就通知你，先去写代码吧。</span>
+              <strong class="caveat">ゲットしました！</strong><br/>
+              <span style="font-size:.9rem;color:var(--pier)">ポテトが揚がったらお知らせします。まずはコーディングに戻りましょう。</span>
             </div>
           </div>
         </div>
 
-        <!-- ── 次要 CTA：GitHub 开源代码 ── -->
+        <!-- ── Secondary CTA ── -->
         <div class="cta-group cta-group--secondary">
           <a href="https://github.com/DreamArc77/FriesOnThePier" target="_blank" rel="noopener" class="btn-primary" id="cta-btn">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            获取开源代码
+            オープンソースコードを取得
           </a>
         </div>
 
@@ -84,15 +81,15 @@
   <!-- ░░░ WHAT IS THIS ░░░ -->
   <section id="what" class="section-what">
     <div class="container">
-      <h2 class="section-title">它是啥玩意儿？</h2>
-      <p class="section-desc">用四格漫画讲清楚，因为没人喜欢读文档</p>
+      <h2 class="section-title">これは何ですか？</h2>
+      <p class="section-desc">4コマ漫画で説明します、誰もドキュメントなんて読みたくないから</p>
       <div class="comic-grid">
-        <img src="comic_panels.png" alt="四格漫画：你写 bug → AI 提醒吃饭 → 海鸥送餐 → 今天也被好好对待" class="comic-img" id="comic-img" />
+        <img src="comic_panels.png" alt="4コマ漫画" class="comic-img" id="comic-img" />
       </div>
       <p class="plugin-desc">
-        插件在你长时间写代码、刚好到了午饭或晚饭时间时，<strong>在回答末尾轻轻补一句提醒</strong>。<br/>
-        你如果同意，它进入点单模式，通过麦当劳中国官方 MCP 帮你完成点单，为你送上一顿热餐。<br/>
-        <span class="caveat-note">（它不会偷偷帮你下单，它是海鸥，不是海盗。）</span>
+        長時間コーディングしていて、ちょうどランチやディナーの時間になった時、プラグインが<strong>AIの回答の最後にそっとリマインダーを追加します</strong>。<br/>
+        あなたが同意すると、注文モードに入り、マクドナルド中国公式 MCP を通じて注文を完了し、温かい食事をお届けします。<br/>
+        <span class="caveat-note">(勝手に注文することはありません。カモメであり、海賊ではありません。)</span>
       </p>
     </div>
   </section>
@@ -100,41 +97,41 @@
   <!-- ░░░ HOW IT WORKS ░░░ -->
   <section id="how" class="section-how">
     <div class="container">
-      <h2 class="section-title">怎么用？</h2>
-      <p class="section-desc">三步，比泡面还简单</p>
+      <h2 class="section-title">使い方</h2>
+      <p class="section-desc">3ステップ、カップラーメンより簡単</p>
       <div class="steps-row">
         <div class="step-card" id="step-1">
           <div class="step-num caveat">01</div>
           <div class="step-icon-wrap" style="background-position: -2px -95px;" aria-hidden="true"></div>
-          <h3 class="step-title">装上去</h3>
-          <p class="step-desc">一行命令，Codex App / Codex CLI / Claude Code 通吃</p>
+          <h3 class="step-title">インストール</h3>
+          <p class="step-desc">1つのコマンドで、Codex App / Codex CLI / Claude Code すべてに対応</p>
           <code class="step-code caveat">/plugin install fries-on-the-pier</code>
         </div>
         <div class="step-arrow" aria-hidden="true">
           <svg viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 12 Q20 6 40 12 Q60 18 78 12" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" fill="none" stroke-dasharray="4 3"/>
             <path d="M68 6 L78 12 L68 18" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="30" y="8" font-family="Caveat" font-size="10" fill="#5A5A5A">然后→</text>
+            <text x="30" y="8" font-family="Caveat" font-size="10" fill="#5A5A5A">そして→</text>
           </svg>
         </div>
         <div class="step-card" id="step-2">
           <div class="step-num caveat">02</div>
           <div class="step-icon-wrap" style="background-position: -110px -95px;" aria-hidden="true"></div>
-          <h3 class="step-title">忘记它</h3>
-          <p class="step-desc">正常写代码，插件在后台默默盯着时间，你不用操心</p>
+          <h3 class="step-title">忘れる</h3>
+          <p class="step-desc">普通にコーディングしてください。プラグインがバックグラウンドで静かに時間を見守っています。気にする必要はありません。</p>
         </div>
         <div class="step-arrow" aria-hidden="true">
           <svg viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 12 Q20 6 40 12 Q60 18 78 12" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" fill="none" stroke-dasharray="4 3"/>
             <path d="M68 6 L78 12 L68 18" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="30" y="8" font-family="Caveat" font-size="10" fill="#5A5A5A">然后→</text>
+            <text x="30" y="8" font-family="Caveat" font-size="10" fill="#5A5A5A">そして→</text>
           </svg>
         </div>
         <div class="step-card" id="step-3">
           <div class="step-num caveat">03</div>
           <div class="step-icon-wrap" style="background-position: -218px -95px;" aria-hidden="true"></div>
-          <h3 class="step-title">吃薯条</h3>
-          <p class="step-desc">饭点到，AI 轻声提醒。说"帮我点"，海鸥出动，热餐送达</p>
+          <h3 class="step-title">ポテトを食べる</h3>
+          <p class="step-desc">食事の時間が来ると、AIが優しくリマインドします。「注文して」と言えば、カモメが出動し、温かい食事が届きます。</p>
         </div>
       </div>
     </div>
@@ -143,8 +140,8 @@
   <!-- ░░░ INSTALLATION ░░░ -->
   <section id="install" class="section-install">
     <div class="container">
-      <h2 class="section-title">安装</h2>
-      <p class="section-desc">选你的平台，复制粘贴，完事</p>
+      <h2 class="section-title">インストール方法</h2>
+      <p class="section-desc">プラットフォームを選んで、コピー＆ペーストするだけ</p>
 
       <div class="tabs">
         <button class="tab-btn active" data-tab="codex-app" id="tab-codex-app">📱 Codex App</button>
@@ -154,59 +151,59 @@
 
       <div class="tab-content active" id="panel-codex-app">
         <ol class="install-steps">
-          <li>打开 Codex App，进入任意对话</li>
-          <li>添加插件市场：
+          <li>Codex App を開き、任意の会話に入ります</li>
+          <li>プラグインマーケットプレイスを追加:
             <div class="code-block">
               <span class="caveat code-line">/plugin marketplace add DreamArc77/FriesOnThePier</span>
-              <button class="copy-btn" data-code="/plugin marketplace add DreamArc77/FriesOnThePier" title="叼走！">🐦 叼走</button>
+              <button class="copy-btn" data-code="/plugin marketplace add DreamArc77/FriesOnThePier" title="コピー!">🐦 コピー</button>
             </div>
           </li>
-          <li>安装插件：
+          <li>プラグインをインストール:
             <div class="code-block">
               <span class="caveat code-line">/plugin install fries-on-the-pier@fries-on-the-pier</span>
-              <button class="copy-btn" data-code="/plugin install fries-on-the-pier@fries-on-the-pier" title="叼走！">🐦 叼走</button>
+              <button class="copy-btn" data-code="/plugin install fries-on-the-pier@fries-on-the-pier" title="コピー!">🐦 コピー</button>
             </div>
           </li>
-          <li>输入 <code class="inline-code caveat">启用自动饭点提醒</code>，完成配置后重启 App</li>
-          <li>正常写代码。到饭点时，回答末尾会自然出现提醒 🍟</li>
+          <li><code class="inline-code caveat">自動食事リマインダーを有効にする</code> と入力し、設定を完了してアプリを再起動します</li>
+          <li>普通にコーディングします。食事の時間になると、回答の最後に自然とリマインダーが表示されます 🍟</li>
         </ol>
         <div class="tip-bubble">
           <span class="tip-bird">🐦</span>
-          <span>首次点餐时，我会引导你去 <a href="https://open.mcd.cn/mcp" target="_blank">open.mcd.cn/mcp</a> 获取 MCP Token，然后帮你配好，你不用手动操作。</span>
+          <span>初めての注文の際、<a href="https://open.mcd.cn/mcp" target="_blank">open.mcd.cn/mcp</a> に案内して MCP Token を取得し、設定までお手伝いします。手動での操作は不要です。</span>
         </div>
       </div>
 
       <div class="tab-content" id="panel-codex-cli">
         <ol class="install-steps">
-          <li>启动 Codex CLI 交互界面</li>
-          <li>添加市场并安装：
+          <li>Codex CLI インタラクティブインターフェースを起動します</li>
+          <li>マーケットプレイスを追加してインストール:
             <div class="code-block">
               <span class="caveat code-line">/plugin marketplace add DreamArc77/FriesOnThePier</span>
-              <button class="copy-btn" data-code="/plugin marketplace add DreamArc77/FriesOnThePier">🐦 叼走</button>
+              <button class="copy-btn" data-code="/plugin marketplace add DreamArc77/FriesOnThePier">🐦 コピー</button>
             </div>
             <div class="code-block" style="margin-top:8px">
               <span class="caveat code-line">/plugin install fries-on-the-pier@fries-on-the-pier</span>
-              <button class="copy-btn" data-code="/plugin install fries-on-the-pier@fries-on-the-pier">🐦 叼走</button>
+              <button class="copy-btn" data-code="/plugin install fries-on-the-pier@fries-on-the-pier">🐦 コピー</button>
             </div>
           </li>
-          <li>输入 <code class="inline-code caveat">启用自动饭点提醒</code>，按提示配置完成</li>
+          <li><code class="inline-code caveat">自動食事リマインダーを有効にする</code> と入力し、プロンプトに従って設定を完了します</li>
         </ol>
       </div>
 
       <div class="tab-content" id="panel-claude">
         <ol class="install-steps">
-          <li>在 Claude Code 中：
+          <li>Claude Code の場合:
             <div class="code-block">
               <span class="caveat code-line">/plugin marketplace add DreamArc77/FriesOnThePier</span>
-              <button class="copy-btn" data-code="/plugin marketplace add DreamArc77/FriesOnThePier">🐦 叼走</button>
+              <button class="copy-btn" data-code="/plugin marketplace add DreamArc77/FriesOnThePier">🐦 コピー</button>
             </div>
             <div class="code-block" style="margin-top:8px">
               <span class="caveat code-line">/plugin install fries-on-the-pier@fries-on-the-pier</span>
-              <button class="copy-btn" data-code="/plugin install fries-on-the-pier@fries-on-the-pier">🐦 叼走</button>
+              <button class="copy-btn" data-code="/plugin install fries-on-the-pier@fries-on-the-pier">🐦 コピー</button>
             </div>
           </li>
-          <li>正常使用 Claude Code。饭点提醒由插件 hook 触发</li>
-          <li>接受提醒后，插件引导你配置麦当劳 MCP Token，继续完成点单</li>
+          <li>Claude Code を通常通り使用します。食事リマインダーはプラグインのフックによってトリガーされます</li>
+          <li>リマインダーを受け入れた後、プラグインがマクドナルド MCP Token の設定を案内し、注文を完了します</li>
         </ol>
       </div>
     </div>
@@ -215,52 +212,52 @@
   <!-- ░░░ FAQ ░░░ -->
   <section id="faq" class="section-faq">
     <div class="container">
-      <h2 class="section-title">常见问题</h2>
-      <p class="section-desc">都是些有点蠢但很合理的问题</p>
+      <h2 class="section-title">よくある質問 (FAQ)</h2>
+      <p class="section-desc">少しバカバカしいけど、とても理にかなった質問たち</p>
 
       <div class="faq-chat">
 
         <div class="faq-item" id="faq-1">
           <div class="chat-q">
-            <div class="chat-bubble q-bubble">这插件会不会帮我自动下单，我没看到就扣钱了？</div>
+            <div class="chat-bubble q-bubble">このプラグインは勝手に注文して、知らないうちにお金が引かれたりしませんか？</div>
             <div class="chat-avatar q-avatar">🧑‍💻</div>
           </div>
           <div class="chat-a">
             <div class="chat-avatar a-avatar">🐦</div>
-            <div class="chat-bubble a-bubble">不会。我是海鸥，不是海盗。下单前我一定问你，你不说话我就在那等着，不会自作主张。</div>
+            <div class="chat-bubble a-bubble">しません。僕はカモメであって海賊ではありません。注文する前には必ず聞きますし、何も言わなければそこで待機します。勝手なことはしません。</div>
           </div>
         </div>
 
         <div class="faq-item" id="faq-2">
           <div class="chat-q">
-            <div class="chat-bubble q-bubble">我不想用麦当劳，能换吗？</div>
+            <div class="chat-bubble q-bubble">マクドナルドは嫌なんですが、変更できますか？</div>
             <div class="chat-avatar q-avatar">🧑‍💻</div>
           </div>
           <div class="chat-a">
             <div class="chat-avatar a-avatar">🐦</div>
-            <div class="chat-bubble a-bubble">目前只支持麦当劳中国官方 MCP。但如果你找到了其他官方 MCP，欢迎 PR，我会考虑放你一马。</div>
+            <div class="chat-bubble a-bubble">現在はマクドナルド中国公式 MCP のみをサポートしています。でも、もし他の公式 MCP を見つけたら、PR を歓迎します。検討してあげてもいいですよ。</div>
           </div>
         </div>
 
         <div class="faq-item" id="faq-3">
           <div class="chat-q">
-            <div class="chat-bubble q-bubble">Token 安全吗？你会不会偷偷存起来？</div>
+            <div class="chat-bubble q-bubble">Token は安全ですか？こっそり保存したりしませんか？</div>
             <div class="chat-avatar q-avatar">🧑‍💻</div>
           </div>
           <div class="chat-a">
             <div class="chat-avatar a-avatar">🐦</div>
-            <div class="chat-bubble a-bubble">Token 只写在你本地的 Codex / Claude 配置里，跟我无关，我连看都没看（其实我看不懂）。我不保存你的 Token、手机号或完整收货地址。</div>
+            <div class="chat-bubble a-bubble">Token はローカルの Codex / Claude 設定ファイルに書き込まれるだけで、僕には関係ありません。そもそも見ていません（というか読めません）。あなたの Token、電話番号、詳細な配達先住所を保存することはありません。</div>
           </div>
         </div>
 
         <div class="faq-item" id="faq-4">
           <div class="chat-q">
-            <div class="chat-bubble q-bubble">我不饿，可以关掉提醒吗？</div>
+            <div class="chat-bubble q-bubble">お腹空いてないんですが、リマインダーをオフにできますか？</div>
             <div class="chat-avatar q-avatar">🧑‍💻</div>
           </div>
           <div class="chat-a">
             <div class="chat-avatar a-avatar">🐦</div>
-            <div class="chat-bubble a-bubble">你说不需要我就不说，我只是有点担心你。😢</div>
+            <div class="chat-bubble a-bubble">不要だと言われれば何も言いません。ただ、あなたのことが少し心配なだけです。😢</div>
           </div>
         </div>
 
@@ -272,14 +269,14 @@
   <footer class="footer" id="footer">
     <div class="footer-inner">
       <div class="footer-bird">
-        <img src="footer_seagull.png" alt="海鸥在码头挥手道别" />
-        <div class="footer-bubble caveat">"去吃饭了啊，<br/>别再刷我的页面了。"</div>
+        <img src="footer_seagull.png" alt="埠頭で手を振るカモメ" />
+        <div class="footer-bubble caveat">"ご飯に行ってよ、<br/>もう僕のページをリロードしないで。"</div>
       </div>
       <div class="footer-links">
         <a href="https://github.com/DreamArc77/FriesOnThePier" target="_blank" rel="noopener">⭐ GitHub</a>
-        <a href="https://github.com/DreamArc77/FriesOnThePier/blob/main/LICENSE" target="_blank" rel="noopener">MIT 许可证</a>
-        <a href="privacy.html">隐私政策</a>
-        <a href="terms.html">用户协议</a>
+        <a href="https://github.com/DreamArc77/FriesOnThePier/blob/main/LICENSE" target="_blank" rel="noopener">MIT ライセンス</a>
+        <a href="privacy-ja.html">プライバシーポリシー</a>
+        <a href="terms-ja.html">利用規約</a>
       </div>
       <p class="footer-addr">3rd Floor, No. 180 Longtai Road, Xuhui District, Shanghai</p>
       <p class="footer-copy">© 2026 Shanghai SurpriseMan Technology Co., LTD. All rights reserved.</p>
@@ -287,7 +284,7 @@
   </footer>
 
   <!-- ░░░ COPIED TOAST ░░░ -->
-  <div class="toast" id="toast">🐦 叼走了！</div>
+  <div class="toast" id="toast">🐦 コピーしました！</div>
 
   <script src="script.js"></script>
 </body>

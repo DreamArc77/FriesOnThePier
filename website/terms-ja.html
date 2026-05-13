@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>利用規約 — FriesOnThePier</title>
+  <meta name="description" content="FriesOnThePierプラグイン 利用規約" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="ENG_logo.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --sky:      #87CEEB;
+      --cream:    #FFF8EE;
+      --ink:      #1A1A1A;
+      --pier:     #5A5A5A;
+      --fries:    #F5C542;
+      --ketchup:  #E8433A;
+      --white:    #FFFFFF;
+      --border:   #D4C8B0;
+    }
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.8;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(0,0,0,.03) 28px, rgba(0,0,0,.03) 29px);
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 60px;
+      background: rgba(255,248,238,.92); backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1rem; color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--ketchup); }
+    .nav-back {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+      text-decoration: none; transition: color .2s;
+    }
+    .nav-back:hover { color: var(--ketchup); }
+
+    /* ── Content ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 100px 5% 80px;
+    }
+
+    h1 {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 2rem; color: var(--ink);
+      margin-bottom: .4rem;
+      position: relative; display: inline-block;
+    }
+    h1::after {
+      content: '';
+      display: block; height: 5px;
+      background: var(--fries);
+      border-radius: 3px;
+      margin-top: 4px;
+      transform: rotate(-1deg);
+    }
+
+    .effective {
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+      margin: 1.2rem 0 2.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 2px dashed var(--border);
+    }
+
+    h2 {
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 1.1rem; color: var(--ketchup);
+      margin: 2.2rem 0 .6rem;
+    }
+
+    p {
+      font-size: .93rem; color: var(--pier);
+      line-height: 1.9; margin-bottom: .8rem;
+    }
+
+    ul {
+      padding-left: 1.4rem; margin-bottom: .8rem;
+    }
+    li {
+      font-size: .93rem; color: var(--pier);
+      line-height: 1.9; margin-bottom: .25rem;
+    }
+
+    a { color: var(--ketchup); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .note {
+      font-family: 'Caveat', cursive;
+      font-size: .95rem; color: var(--pier);
+      margin-top: 1.5rem;
+      padding: .8rem 1rem;
+      border: 2px dashed var(--border);
+      border-radius: 8px;
+      background: rgba(135,206,235,.12);
+    }
+
+    /* ── LANGUAGE SWITCHER ── */
+    .lang-switcher {
+      display: flex;
+      gap: 4px;
+      background: var(--white);
+      border-radius: 100px;
+      padding: 4px;
+    }
+    .lang-switcher a {
+      text-decoration: none;
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: 0.9rem;
+      color: var(--pier);
+      padding: 4px 10px;
+      border-radius: 100px;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+    .lang-switcher a:hover {
+      color: var(--ketchup);
+      background: var(--cream);
+    }
+    .lang-switcher a.active {
+      background: var(--fries);
+      color: var(--ink);
+      border: 1px solid var(--ink);
+    }
+    nav .lang-switcher {
+      box-shadow: 1px 1px 0 var(--ink);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 2px solid var(--border);
+      background: var(--sky);
+      padding: 1.8rem 5%;
+      text-align: center;
+      font-family: 'Caveat', cursive;
+      font-size: 1rem; color: var(--pier);
+    }
+    .footer-links { margin-bottom: .6rem; }
+    .footer-links a {
+      color: var(--pier); text-decoration: none;
+      margin: 0 .6rem; transition: color .2s;
+      font-family: 'ZCOOL KuaiLe', cursive;
+      font-size: .95rem;
+    }
+    .footer-links a:hover { color: var(--ketchup); }
+    .footer-addr {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: .78rem; color: var(--pier);
+      line-height: 1.7; margin-bottom: .4rem;
+    }
+    .footer-copy {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: .78rem; color: var(--pier);
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index-ja.html" class="nav-logo">🐦 FriesOnThe<span>Pier</span></a>
+  <div style="display:flex; align-items:center; gap: 16px;">
+    <div class="lang-switcher">
+      <a href="terms.html">中文</a>
+      <a href="terms-en.html">EN</a>
+      <a href="terms-ja.html" class="active">日本語</a>
+    </div>
+    <a href="index-ja.html" class="nav-back">← ホームに戻る</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>利用規約</h1>
+  <div class="effective">発効日：2026年4月30日</div>
+
+  <h2>1. このプラグインについて</h2>
+  <p>FriesOnThePier（以下「本プラグイン」）は、上海惊喜人科技有限公司（「当社」）によって開発された無料のオープンソースプラグインであり、CodexやClaude CodeなどのAIコーディングツールをサポートしています。本プラグインは、食事の時間にユーザーに食事をリマインドし、マクドナルド中国の公式MCPサービスを通じた注文をサポートします。</p>
+
+  <h2>2. 規約への同意</h2>
+  <p>本プラグインをインストール、有効化、または使用することにより、本利用規約に拘束されることに同意したものとみなされます。同意しない場合は、本プラグインを使用しないでください。</p>
+
+  <h2>3. ライセンス</h2>
+  <p>FriesOnThePierはMITライセンスの下でリリースされています。プロジェクトリポジトリ <a href="https://github.com/DreamArc77/FriesOnThePier" target="_blank">github.com/DreamArc77/FriesOnThePier</a> で公開されているMITライセンスの条件に従って、本プラグインのコピーを自由に使用、コピー、変更、マージ、公開、配布、サブライセンス、および/または販売することができます。</p>
+
+  <h2>4. 利用資格</h2>
+  <p>本プラグインを使用するには、13歳以上である必要があります。本プラグインを使用することにより、この要件を満たしていることを確認したものとします。</p>
+
+  <h2>5. 適切な使用</h2>
+  <p>ユーザーは、以下の目的で本プラグインを使用しないことに同意するものとします：</p>
+  <ul>
+    <li>ユーザーの居住地域の適用法または規制に違反する行為。</li>
+    <li>雇用主またはクライアントとの契約上の義務または内部ポリシーに違反すること。</li>
+    <li>サードパーティのソフトウェア、システム、またはデータを妨害、損傷、または破壊すること。</li>
+    <li>有害、違法、または虐待的なコンテンツを生成または拡散すること。</li>
+    <li>適用法に違反する方法でセキュリティまたは監視システムを回避すること。</li>
+  </ul>
+
+  <h2>6. サードパーティの MCP サービス</h2>
+  <p>注文機能は、マクドナルド中国の公式MCPサービス（mcd-mcp）に依存しています。この機能を使用する場合、マクドナルド中国の関連する利用規約およびプライバシーポリシーにも従う必要があります。当社は、マクドナルドサービスの可用性、正確性、またはいかなる注文結果についても責任を負いません。</p>
+
+  <h2>7. 免責事項</h2>
+  <p>本プラグインは「現状有姿」および「利用可能な範囲」で提供され、商品性、特定の目的への適合性、または非侵害の保証を含む（ただしこれらに限定されない）、明示または黙示を問わず、いかなる種類の保証も伴いません。当社は、本プラグインが中断されないこと、エラーがないこと、または特定の結果を達成することを保証しません。</p>
+
+  <h2>8. 責任の制限</h2>
+  <p>適用法で許可される最大限の範囲において、上海惊喜人科技有限公司およびその関連会社は、雇用の影響、データの損失、またはシステムの損傷を含む（ただしこれらに限定されない）、本プラグインの使用または使用不能から生じるいかなる間接的、付随的、特別、結果的、または懲罰的損害についても責任を負いません。本プラグインの使用は、ユーザー自身の責任において行われるものとします。</p>
+
+  <h2>9. ユーザーの責任</h2>
+  <p>本プラグインの使用方法については、ユーザーが単独で責任を負うものとします。雇用主による懲戒処分を含む（ただしこれらに限定されない）、本プラグインの使用から生じるいかなる職業的、法的、または個人的な結果についても、当社は責任を負いません。</p>
+
+  <h2>10. 規約の更新</h2>
+  <p>当社は、本規約を随時更新する場合があります。更新はこのページに新しい発効日とともに掲載されます。更新後も継続して使用することで、更新された規約に同意したものとみなされます。</p>
+
+  <h2>11. 準拠法</h2>
+  <p>本規約は中華人民共和国の法律に準拠します。いかなる紛争も、解決のために上海市の管轄裁判所に提出されるものとします。</p>
+
+  <h2>12. お問い合わせ</h2>
+  <p>本規約に関するご質問は、以下までお問い合わせください：<br/>
+  <a href="mailto:support@surpriseman.ai">support@surpriseman.ai</a><br/>
+  3rd Floor, No. 180 Longtai Road, Xuhui District, Shanghai</p>
+
+  <p class="note">注：本利用規約は中華人民共和国の法律に準拠し、紛争は上海の管轄裁判所によって解決されるものとします。ご不明な点がございましたら、上記の連絡先からご連絡ください。</p>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index-ja.html">🏠 ホーム</a>
+    <a href="privacy-ja.html">プライバシーポリシー</a>
+    <a href="terms-ja.html">利用規約</a>
+  </div>
+  <p class="footer-addr">3rd Floor, No. 180 Longtai Road, Xuhui District, Shanghai</p>
+  <p class="footer-copy">© 2026 Shanghai SurpriseMan Technology Co., LTD. All rights reserved.</p>
+</footer>
+</body>
+</html>
